@@ -140,8 +140,21 @@ if __name__ =="__main__":
                     available.append(key)
         #Make an assignment
         assigned = -1
-        assigned = random.choice(available)
+        maxi = -1
+        r = random.uniform(0, 1)
+        cur = 0
+        total=0
+        for u in available:
+            potentialEdge=str(u) + ";" + str(RHSarrival)
+            total+=edges[potentialEdge]["xe"][t]
 
+        for u in available:
+            potentialEdge=str(u) + ";" + str(RHSarrival)
+            if edges[potentialEdge]["xe"][t]/float(total)-cur>r:
+                assigned=u
+                break
+            cur+=edges[potentialEdge]["xe"][t]/float(total)
+        
         #Update parameters
         for key in LHSvertices:
             if key == assigned:
