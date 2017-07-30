@@ -125,7 +125,7 @@ for k in xrange(K):
 print "Write to file"
 
 fname = bfile + pfile + afile + nonint
-ROOT = ROOT + "LP/"
+ROOT = "./small_dataset/LP/"
 f = open(ROOT + "vals_" + fname + CSV, "w+")
 np.array(valsl).tofile(f, sep=",")
 f.close()

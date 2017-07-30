@@ -1,5 +1,6 @@
-root = '~/crowdsourcing/small_dataset/LP/'
+root = '../../small_dataset/LP/'
 fname = strcat(strcat(strcat(bfile, pfile), afile), noInt);
+fname
 
 val = csvread(strcat(strcat(strcat(root, 'vals_'), fname), '.csv'));
 I = csvread(strcat(strcat(strcat(root, 'I_'), fname), '.csv'))+1;
