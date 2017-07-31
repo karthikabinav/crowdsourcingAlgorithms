@@ -14,8 +14,8 @@ if dist =='uniform':
   for p in pjt:
     f.write(str(p) + '\n')
 else:
-  a=1
-  b=100
+  a=0
+  b=1
   nop=float(sys.argv[3])
   mu=(a+b)/2.0
   sigma=(b-a)/6.0
